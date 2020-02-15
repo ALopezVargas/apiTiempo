@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pagina Test</title>
+    <style>
+        .hide{
+            visibility: hidden;
+        }
+    </style>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+     <script>
+     $(document).ready(
+            function(){
+                $("#primero ul li:first").click(
+                function(event){
+                    alert("Hiciste click en el primer elemento.");
+                    $("#primero ul li:first").addClass("hide");
+                    alert("Fijese que el elemento ha desaparecido.");
+                    $("#primero ul li").css("color","blue");
+                });
+            }
+        );
+     </script>
+</head>
+<body>
+    <h1>Compra</h1>
+    <ul id="primero">
+        <li>Lista 1
+            <ul>
+                <li>Cafe</li>
+                <li>Leche</li>
+                <li>Huevos</li>
+            </ul>
+        </li>
+</body>
+</html>
